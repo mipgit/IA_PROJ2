@@ -1,0 +1,356 @@
+ID_Transacao,ID_Cliente,Data,Produto,Categoria,Marca,Preco_Unitario,Loja
+744167,10000,2025-01-28,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+154886,10000,2025-03-29,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+621430,10000,2025-05-26,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+999159,10000,2025-07-23,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+291335,10000,2025-09-20,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+429365,10000,2025-11-17,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+421879,10000,2026-01-13,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+447449,10001,2025-05-18,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+358795,10001,2025-06-08,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+600186,10001,2025-06-25,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+249503,10001,2025-07-13,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+748143,10001,2025-08-02,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+691723,10001,2025-08-21,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+655839,10001,2025-09-10,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+431236,10001,2025-09-29,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+370936,10002,2025-01-25,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+798361,10002,2025-02-24,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+168148,10002,2025-03-26,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+351995,10002,2025-04-27,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+672843,10002,2025-05-29,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+704365,10002,2025-06-29,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+560337,10002,2025-07-31,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+905889,10002,2025-09-01,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+302283,10003,2025-04-18,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+323165,10003,2025-05-07,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+363160,10003,2025-05-28,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+123247,10003,2025-06-19,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+707086,10003,2025-07-08,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+819064,10003,2025-07-27,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+476896,10004,2025-05-22,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+220151,10004,2025-06-12,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+233767,10004,2025-07-06,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+580754,10004,2025-07-29,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+686146,10004,2025-08-21,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+400804,10004,2025-09-13,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+728776,10004,2025-10-05,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+130535,10004,2025-10-26,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+938688,10004,2025-11-17,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+589570,10004,2025-12-12,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+994498,10004,2026-01-04,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+723094,10005,2025-02-11,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+219176,10005,2025-03-10,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+222409,10005,2025-04-05,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+353618,10005,2025-05-04,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+731347,10005,2025-05-29,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+511357,10005,2025-06-26,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+298286,10005,2025-07-25,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+264899,10005,2025-08-23,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+979858,10005,2025-09-19,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+542296,10006,2025-09-11,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+981691,10006,2025-10-31,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+125939,10006,2025-12-20,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+642335,10006,2026-02-07,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+515192,10006,2026-03-29,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+551269,10007,2025-02-09,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+850216,10007,2025-03-14,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+328576,10007,2025-04-18,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+265838,10007,2025-05-20,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+218451,10007,2025-06-20,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+139353,10007,2025-07-21,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+414877,10007,2025-08-24,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+582690,10007,2025-09-25,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+840976,10007,2025-10-30,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+870746,10007,2025-11-30,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+737147,10007,2026-01-01,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+842452,10008,2025-06-22,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+335167,10008,2025-07-06,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+283734,10008,2025-07-22,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+911774,10008,2025-08-06,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+206081,10008,2025-08-23,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+210078,10008,2025-09-07,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+233883,10009,2025-02-09,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+659042,10009,2025-03-17,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+242483,10009,2025-04-21,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+501896,10009,2025-05-27,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+373255,10009,2025-06-30,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+108155,10009,2025-08-04,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+474705,10009,2025-09-06,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+654594,10009,2025-10-10,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+247443,10010,2025-07-06,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+757409,10010,2025-07-28,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+907364,10010,2025-08-22,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+798376,10010,2025-09-15,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+798002,10010,2025-10-09,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+898615,10011,2025-09-02,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+478480,10011,2025-09-24,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+601157,10011,2025-10-17,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+616349,10011,2025-11-09,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+837378,10011,2025-11-29,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+881474,10012,2025-04-15,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+736584,10012,2025-05-28,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+138467,10012,2025-07-06,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+580047,10012,2025-08-18,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+710704,10012,2025-09-28,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+356687,10012,2025-11-06,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+271890,10012,2025-12-17,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+829650,10012,2026-01-29,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+392890,10012,2026-03-11,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+940477,10012,2026-04-23,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+727234,10013,2025-06-01,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+730271,10013,2025-07-24,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+224123,10013,2025-09-18,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+182989,10013,2025-11-14,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+787995,10013,2026-01-08,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+511927,10013,2026-03-06,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+231373,10013,2026-04-28,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+477812,10014,2025-04-18,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+218015,10014,2025-05-14,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+789944,10014,2025-06-10,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+465890,10014,2025-07-07,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+172991,10014,2025-08-03,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+156958,10014,2025-08-30,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+855073,10014,2025-09-26,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+258823,10014,2025-10-22,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+493002,10014,2025-11-17,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+544209,10015,2025-09-30,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+319963,10015,2025-11-17,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+997059,10015,2025-12-31,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+364512,10015,2026-02-16,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+712210,10015,2026-04-04,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+152921,10016,2025-09-05,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+384821,10016,2025-09-28,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+131024,10016,2025-10-18,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+489957,10016,2025-11-07,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+561243,10016,2025-11-28,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+804107,10017,2025-08-27,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+821772,10017,2025-09-16,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+562894,10017,2025-10-06,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+860463,10017,2025-10-26,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+903451,10017,2025-11-13,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+186672,10017,2025-12-02,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+128251,10017,2025-12-21,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+977284,10017,2026-01-08,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+200235,10018,2025-06-21,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+953049,10018,2025-08-04,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+277247,10018,2025-09-17,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+276615,10018,2025-10-31,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+473632,10018,2025-12-18,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+814998,10019,2025-01-21,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+612153,10019,2025-03-22,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+244356,10019,2025-05-20,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+455612,10019,2025-07-16,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+547556,10019,2025-09-14,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+675581,10019,2025-11-10,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+260196,10019,2026-01-09,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+876665,10019,2026-03-08,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+456902,10019,2026-05-08,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+647337,10020,2025-10-03,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+983811,10020,2025-11-18,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+533374,10020,2026-01-02,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+472370,10020,2026-02-14,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+404119,10020,2026-03-28,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+497827,10020,2026-05-13,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+636226,10021,2025-05-27,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+104000,10021,2025-06-29,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+455754,10021,2025-08-03,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+599522,10021,2025-09-08,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+604999,10021,2025-10-11,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+251836,10021,2025-11-15,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+924926,10021,2025-12-21,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+721820,10021,2026-01-24,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+738873,10022,2025-07-28,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+307869,10022,2025-09-26,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+600328,10022,2025-11-26,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+182745,10022,2026-01-27,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+257164,10022,2026-03-28,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+214352,10023,2025-04-17,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+924273,10023,2025-05-16,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+406955,10023,2025-06-15,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+798646,10023,2025-07-15,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+514568,10023,2025-08-12,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+734736,10023,2025-09-07,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+278031,10023,2025-10-06,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+509995,10024,2025-05-02,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+825256,10024,2025-06-26,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+575853,10024,2025-08-23,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+940530,10024,2025-10-20,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+750308,10024,2025-12-18,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+320184,10024,2026-02-14,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+449652,10024,2026-04-12,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+897606,10025,2025-09-14,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+633636,10025,2025-11-11,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+464778,10025,2026-01-11,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+727438,10025,2026-03-10,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+254697,10025,2026-05-06,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+277804,10026,2025-10-19,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+818216,10026,2025-11-17,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+905497,10026,2025-12-17,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+712380,10026,2026-01-18,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+128295,10026,2026-02-17,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+257504,10026,2026-03-21,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+585008,10026,2026-04-21,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+743162,10027,2025-04-27,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+849074,10027,2025-06-07,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+186188,10027,2025-07-19,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+764795,10027,2025-08-29,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+130355,10027,2025-10-09,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+256542,10027,2025-11-22,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+663586,10027,2026-01-01,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+161629,10027,2026-02-13,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+390160,10027,2026-03-28,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+989765,10027,2026-05-07,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+455540,10028,2025-08-07,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+383876,10028,2025-09-06,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+523570,10028,2025-10-05,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+738353,10028,2025-11-01,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+152528,10028,2025-11-28,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+601108,10028,2025-12-25,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+250159,10028,2026-01-23,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+965291,10028,2026-02-19,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+386103,10028,2026-03-21,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+260775,10028,2026-04-21,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+730075,10029,2025-06-12,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+520571,10029,2025-07-07,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+891267,10029,2025-07-29,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+802965,10029,2025-08-22,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+965184,10029,2025-09-13,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+790907,10029,2025-10-08,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Coimbra-Alma
+498929,10030,2025-02-15,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+675278,10030,2025-03-16,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+578007,10030,2025-04-11,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+418714,10030,2025-05-07,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+625303,10030,2025-06-05,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+724785,10030,2025-06-30,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+228778,10030,2025-07-25,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+235230,10030,2025-08-20,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+434618,10030,2025-09-16,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+251456,10030,2025-10-15,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+773744,10031,2025-10-20,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+335365,10031,2025-12-16,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+910006,10031,2026-02-11,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+897348,10031,2026-04-09,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+943523,10032,2025-09-05,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+399888,10032,2025-10-13,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+136187,10032,2025-11-21,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+608153,10032,2025-12-30,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+718362,10032,2026-02-08,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+740053,10032,2026-03-21,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+225917,10032,2026-05-02,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+926196,10033,2025-04-02,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+585450,10033,2025-04-22,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+106949,10033,2025-05-14,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+828913,10033,2025-06-03,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Porto-NorteShopping
+880722,10033,2025-06-24,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+576467,10033,2025-07-14,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+983671,10033,2025-08-02,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+563389,10033,2025-08-24,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Online
+353490,10033,2025-09-13,Soro Fisiológico (Pack 20),Saúde,Marca Própria,3.99,Lisboa-Rossio
+842729,10034,2025-06-10,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+417267,10034,2025-07-09,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+323777,10034,2025-08-08,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+105569,10034,2025-09-07,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+358090,10034,2025-10-05,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+311791,10035,2025-05-28,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+766997,10035,2025-07-30,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+994647,10035,2025-10-02,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+314879,10035,2025-12-04,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+431868,10035,2026-02-05,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+653020,10035,2026-04-08,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+466824,10036,2025-10-25,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+848589,10036,2025-12-08,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+191865,10036,2026-01-20,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+123624,10036,2026-03-06,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+909006,10036,2026-04-18,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+936860,10037,2025-07-05,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+915131,10037,2025-08-05,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+772108,10037,2025-09-05,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+358930,10037,2025-10-07,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+904462,10037,2025-11-08,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+662926,10037,2025-12-10,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+218033,10037,2026-01-13,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+765627,10038,2025-06-29,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+674736,10038,2025-08-29,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+870173,10038,2025-10-30,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+728880,10038,2025-12-30,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+499384,10038,2026-03-04,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+567010,10038,2026-05-05,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+574665,10039,2025-03-04,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+294053,10039,2025-05-07,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+672735,10039,2025-07-07,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+699991,10039,2025-09-07,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+212581,10039,2025-11-10,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+814016,10039,2026-01-09,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+216421,10039,2026-03-14,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+224040,10040,2025-07-23,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+518034,10040,2025-09-11,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+962755,10040,2025-11-02,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+403571,10040,2025-12-21,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+222883,10040,2026-02-09,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+212221,10040,2026-03-29,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+716210,10041,2025-06-30,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+800947,10041,2025-07-27,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+489678,10041,2025-08-26,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+964909,10041,2025-09-23,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+101917,10041,2025-10-24,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+467436,10041,2025-11-23,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+382272,10041,2025-12-22,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+814743,10041,2026-01-19,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+478892,10042,2025-05-07,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+108512,10042,2025-07-09,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+208872,10042,2025-09-13,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+872042,10042,2025-11-14,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+142078,10042,2026-01-17,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+327645,10042,2026-03-24,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+446699,10043,2025-06-11,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+872608,10043,2025-07-25,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+237023,10043,2025-09-08,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+535048,10043,2025-10-22,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+451005,10043,2025-12-06,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+639812,10043,2026-01-21,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+248056,10044,2025-08-25,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+577272,10044,2025-10-27,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+435484,10044,2025-12-30,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+318134,10044,2026-03-02,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+250168,10044,2026-05-03,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+323810,10045,2025-04-11,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+910951,10045,2025-06-07,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Porto-NorteShopping
+443054,10045,2025-08-04,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+367552,10045,2025-10-02,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Coimbra-Alma
+198723,10045,2025-11-28,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+953088,10045,2026-01-22,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Lisboa-Rossio
+132154,10045,2026-03-22,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,Online
+548396,10046,2025-06-30,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+302967,10046,2025-08-05,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+382247,10046,2025-09-11,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Lisboa-Rossio
+114382,10046,2025-10-18,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+759116,10046,2025-11-23,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Porto-NorteShopping
+247550,10046,2025-12-28,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+437827,10046,2026-02-01,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Coimbra-Alma
+486858,10046,2026-03-07,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+695603,10046,2026-04-13,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,Online
+959751,10047,2025-03-22,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+641656,10047,2025-05-10,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+913738,10047,2025-06-30,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+923651,10047,2025-08-20,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+295716,10047,2025-10-10,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+990695,10047,2025-12-01,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+127632,10047,2026-01-19,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+417320,10047,2026-03-09,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+598716,10047,2026-04-28,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+384260,10048,2025-02-11,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+232717,10048,2025-04-01,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+594592,10048,2025-05-19,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+430388,10048,2025-07-08,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
+568276,10048,2025-08-25,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+611411,10048,2025-10-13,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+984377,10048,2025-12-04,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+950163,10048,2026-01-23,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+863978,10048,2026-03-13,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+632358,10048,2026-05-01,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Porto-NorteShopping
+666202,10049,2025-10-09,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+871253,10049,2025-11-28,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+429670,10049,2026-01-15,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Coimbra-Alma
+318967,10049,2026-03-08,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Lisboa-Rossio
+194270,10049,2026-04-25,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,Online
