@@ -1,0 +1,792 @@
+ID_Transacao,Produto,Categoria,Marca,Preco_Unitario,Quantidade
+100000,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100001,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100001,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100002,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100002,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100003,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100003,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100004,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100004,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100005,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100005,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100006,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100007,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100007,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100008,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100008,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100009,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100009,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100010,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100010,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100011,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100011,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100012,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100013,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100013,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100014,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100014,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100015,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100016,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100016,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100017,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100018,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100018,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100019,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100019,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100020,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100020,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100021,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100021,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100022,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100022,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100023,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100023,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100024,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100024,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100025,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100025,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100026,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100027,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100027,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100027,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100028,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100028,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100028,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100029,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100030,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100030,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100030,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100031,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100031,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100032,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100032,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100032,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100033,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100033,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100034,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100034,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100035,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100035,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100036,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100037,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100037,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100038,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100038,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100039,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100039,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100040,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100040,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100041,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100041,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100042,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100042,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100043,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100043,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100044,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100044,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100045,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100046,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100046,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100047,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100048,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100049,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100049,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100050,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100050,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100051,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100051,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100052,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100052,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100053,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100054,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100054,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100055,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100055,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100056,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100057,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100057,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100058,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100059,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100059,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100060,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100060,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100061,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100062,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100063,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100063,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100064,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100065,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100066,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100066,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100066,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100067,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100068,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100068,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100068,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100069,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100069,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100069,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100070,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100071,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100071,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100072,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100072,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100073,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100074,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100074,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100075,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100076,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100077,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100078,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100078,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100079,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100080,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100080,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100080,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100081,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100081,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100081,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100082,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100083,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100083,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100083,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100084,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100084,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100085,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100085,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100085,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100086,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,2
+100086,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100087,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100088,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100088,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100089,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100089,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100090,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100090,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100091,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,2
+100091,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100092,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100092,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100093,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100093,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100094,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100094,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100095,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100095,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100095,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100096,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100096,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100097,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100098,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100098,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100099,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100099,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100100,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100101,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100102,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100102,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100103,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100103,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100104,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100104,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100105,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100106,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100107,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100107,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100107,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100108,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100109,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100109,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100109,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100110,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100110,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100111,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100112,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100112,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100113,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100114,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100114,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100115,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100115,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100116,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100116,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100117,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100117,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100118,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100119,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100120,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100120,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100121,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100122,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100122,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100123,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100123,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100124,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100124,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100125,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100125,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100126,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100127,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100127,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100128,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100129,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100130,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100130,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100131,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100131,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100131,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100132,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100133,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100133,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100134,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100134,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100135,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100136,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100136,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100136,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100137,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100137,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100138,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100138,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100138,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100139,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100140,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100140,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100141,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100141,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100142,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100142,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100143,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100143,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100144,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100145,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100146,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100146,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100147,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100147,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100148,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100148,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100149,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100149,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100150,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100151,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100151,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100152,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100152,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100153,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100153,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100154,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100154,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100155,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100155,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100156,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100156,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100157,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100158,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100158,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100159,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100159,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100160,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100160,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100160,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100161,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100162,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100162,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100162,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100163,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100163,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100163,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100164,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100165,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100166,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100167,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100167,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100167,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100168,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100168,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100169,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100169,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100170,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100170,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100171,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100171,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100172,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100173,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100173,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100174,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100174,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100175,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100176,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100176,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100177,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100177,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100178,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100179,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100179,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100180,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100181,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100182,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100182,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100183,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100183,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100184,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100185,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100186,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100186,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100187,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100187,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100188,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100189,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100189,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100190,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100191,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100192,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100192,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100193,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100193,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100194,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100195,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100195,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100196,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100196,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100197,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100197,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100198,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100198,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100199,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100199,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100200,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100200,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100201,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100202,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100202,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100203,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100203,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100204,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100204,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100205,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100205,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100206,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100207,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100207,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100208,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100208,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100209,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100209,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100210,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100210,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100211,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100211,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100212,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100213,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100213,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100214,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100214,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100215,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100215,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100216,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100217,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100217,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100218,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100219,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100219,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100220,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100221,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100221,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100222,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100222,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100223,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100223,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100224,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100224,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100225,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100226,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100227,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100227,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100228,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100228,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100229,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100229,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100230,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100231,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100231,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100232,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100233,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100234,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100235,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100235,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100236,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100236,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100237,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100238,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100239,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100239,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100240,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100240,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100241,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100241,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100242,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100242,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100243,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100243,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100244,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100244,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100245,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100245,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100246,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100246,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100247,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100247,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100248,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100248,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100249,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100249,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100250,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100251,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100251,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100252,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100252,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100253,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100254,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100254,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100255,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100255,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100256,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100256,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100257,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100258,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100259,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100259,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100260,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100261,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100262,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100263,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100263,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100264,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100264,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100265,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,2
+100265,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100266,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,1
+100267,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,2
+100267,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100268,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,2
+100268,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100269,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,2
+100269,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100270,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,2
+100270,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100271,Proteína em Pó 500g,Suplementos,Whey Gold,35.99,2
+100272,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100272,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100273,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100273,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100274,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100274,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100275,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100275,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100276,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100276,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100277,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100278,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100279,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100280,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100280,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100281,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100281,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100282,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100283,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100283,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100284,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100284,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100285,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100285,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100286,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100286,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100287,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100287,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100288,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100289,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100289,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100290,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100291,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100291,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100292,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100292,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100293,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100294,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100295,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100296,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100296,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100297,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100297,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100298,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100299,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100299,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100300,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100300,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100301,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100301,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100302,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100302,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100303,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100304,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100305,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100305,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100306,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100307,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100307,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100308,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100308,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100309,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100309,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100310,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100311,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100312,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100312,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100313,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100313,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100314,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100315,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100316,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100316,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100317,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100318,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100318,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100319,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100319,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100320,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100321,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100322,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100323,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100323,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100324,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100324,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100325,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100325,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100326,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100326,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100327,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100327,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100328,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100329,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100329,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100330,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100331,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100331,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100332,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100332,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100333,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100333,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100334,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100334,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100335,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100336,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100336,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100337,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100338,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100338,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100339,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100340,Óculos de Sol UV,Óptica,Ray-Ban,89.99,2
+100341,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100342,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100342,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100343,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100343,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100344,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100345,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100345,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100346,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100346,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100347,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100347,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100347,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100348,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100349,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,2
+100350,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100351,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100351,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100352,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100353,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100353,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100354,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100354,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100355,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100355,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100356,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100356,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100357,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100357,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100358,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100359,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100359,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100360,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100360,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100361,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100362,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100362,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100363,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100363,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100364,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100365,Desodorizante Antitranspirante,Higiene,Rexona,5.99,2
+100366,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100366,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100367,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100367,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100368,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100368,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100369,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100369,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100370,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100370,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100371,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100371,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100372,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100372,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100373,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100373,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100374,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100375,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100376,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100376,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100377,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100377,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100378,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100378,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100379,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100380,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100380,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100381,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100381,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100382,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100383,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100383,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100384,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100384,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100385,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100385,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100386,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100386,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100387,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100387,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100388,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100388,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100389,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100389,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100390,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,2
+100390,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100391,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100391,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100392,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100392,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100393,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100393,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100393,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100394,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100394,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100394,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100395,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100395,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100396,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100396,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100397,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100397,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100398,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100398,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100398,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100399,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100400,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,1
+100400,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100401,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100401,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100402,Protetor Solar SPF50 75ml,Dermocosmética,Sunsan,15.99,2
+100402,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100402,Óculos de Sol UV,Óptica,Ray-Ban,89.99,1
+100403,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100404,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100404,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100405,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100405,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100406,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100406,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100407,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100407,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100408,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100408,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100409,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100409,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100410,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,2
+100410,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100411,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100412,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100413,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100413,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100414,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100414,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100415,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100415,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100416,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,1
+100417,Multivitamínico (60 cápsulas),Suplementos,Centrum,18.9,2
+100417,Ómega-3 (60 cápsulas),Suplementos,Nutrilite,22.5,1
+100418,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100418,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100418,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100419,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100419,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100419,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100420,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,1
+100421,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100421,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100421,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100422,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100423,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100423,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100423,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100424,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100425,Lentes de Contacto (30 unidades),Óptica,Acuvue,24.99,2
+100425,Soro Fisiológico (Pack 20),Saúde Visual,Marca Própria,3.99,1
+100425,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100426,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100426,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100427,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100427,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100428,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100428,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100429,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,2
+100430,Tónico Facial 200ml,Dermocosmética,Wells Care,9.99,1
+100431,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100431,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100432,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100433,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100433,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100434,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100434,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100435,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100435,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100436,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100436,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100437,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100437,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100438,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100439,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,1
+100439,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100440,Sérum Anti-Rugas 30ml,Dermocosmética,Wells Premium,28.99,2
+100440,Creme Hidratante Facial 50ml,Dermocosmética,Wells Care,12.5,1
+100441,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100441,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100442,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100442,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100443,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100443,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100444,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100444,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100445,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100445,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100446,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,1
+100446,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100447,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100447,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100448,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
+100448,Desodorizante Antitranspirante,Higiene,Rexona,5.99,1
+100449,Gel Higienizante 500ml,Higiene,Marca Própria,4.99,2
