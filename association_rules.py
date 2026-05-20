@@ -19,10 +19,6 @@ df_itens = pd.read_csv('data/itens_transacao.csv')
 # CALCULATE CO-PURCHASES WITH SYMMETRIC CONFIDENCES
 # ============================================================================
 
-print("="*80)
-print("CALCULANDO REGRAS DE ASSOCIAÇÃO COM CONFIDÊNCIAS SIMÉTRICAS")
-print("="*80)
-
 # Create list of transactions with products
 transactions = {}  # transaction_id -> set of products
 for tid in df_itens['ID_Transacao'].unique():
@@ -30,7 +26,6 @@ for tid in df_itens['ID_Transacao'].unique():
     transactions[tid] = produtos
 
 total_transactions = len(transactions)
-print(f"\nTotal de transações: {total_transactions}")
 
 # Find all product pairs that appear together
 product_pairs = {}  # (prod_a, prod_b) -> count
@@ -40,8 +35,6 @@ for tid, produtos in transactions.items():
     for prod_a, prod_b in combinations(sorted(produtos), 2):
         pair_key = (prod_a, prod_b)
         product_pairs[pair_key] = product_pairs.get(pair_key, 0) + 1
-
-print(f"Pares de produtos únicos: {len(product_pairs)}")
 
 # Count individual product purchases
 product_counts = {}
@@ -85,34 +78,20 @@ for (prod_a, prod_b), count_both in product_pairs.items():
 df_rules = pd.DataFrame(rules_data)
 df_rules = df_rules.sort_values('Co_Purchase_Rate', ascending=False)
 
-print(f"\nRegras de associação geradas: {len(df_rules)}")
-
 # ============================================================================
 # DISPLAY RESULTS
 # ============================================================================
-
-print(f"\n{'='*80}")
-print("REGRAS DE ASSOCIAÇÃO COM CONFIDÊNCIAS SIMÉTRICAS")
-print(f"{'='*80}\n")
 
 display_df = df_rules[[
     'Produto_A', 'Produto_B', 'Confianca_A_para_B', 'Confianca_B_para_A', 
     'Co_Purchase_Rate', 'Lift'
 ]].copy()
 
-for idx, (_, row) in enumerate(display_df.iterrows(), 1):
-    print(f"{idx}. {row['Produto_A']} ↔ {row['Produto_B']}")
-    print(f"   Se compra A → B: {row['Confianca_A_para_B']:.1f}%")
-    print(f"   Se compra B → A: {row['Confianca_B_para_A']:.1f}%")
-    print(f"   Co-purchase Rate: {row['Co_Purchase_Rate']:.1f}%")
-    print(f"   Lift: {row['Lift']:.2f}x\n")
-
 # ============================================================================
 # SAVE RULES TO CSV
 # ============================================================================
 
 df_rules.to_csv('data/regras_associacao.csv', index=False)
-print(f"✓ Regras salvas em 'data/regras_associacao.csv'")
 
 # ============================================================================
 # BUILD PRODUCT RECOMMENDATION DICT (for quick lookup in streamlit)
@@ -155,9 +134,5 @@ for produto in recommendations:
 # Save recommendations
 joblib.dump(recommendations, 'modelo_recomendacoes.pkl')
 
-print(f"✓ Modelo de recomendações guardado em 'modelo_recomendacoes.pkl'")
-print(f"  - Produtos com recomendações: {len(recommendations)}")
+print(f"Modelo de recomendações guardado em 'modelo_recomendacoes.pkl'")
 
-print(f"\n{'='*80}")
-print("✓ Sucesso: Modelos de associação treinados com confidências simétricas!")
-print(f"{'='*80}\n")

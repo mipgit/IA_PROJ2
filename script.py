@@ -156,9 +156,3 @@ df_items = pd.DataFrame(items_list)
 # Save both tables
 df_transactions.to_csv('data/transacoes.csv', index=False)
 df_items.to_csv('data/itens_transacao.csv', index=False)
-
-print(f"✓ Sucesso: Dados normalizados gerados!")
-print(f"  - Transações: {len(df_transactions)} registos em 'data/transacoes.csv'")
-print(f"  - Itens: {len(df_items)} registos em 'data/itens_transacao.csv'")
-print(f"  - Clientes: {n_clientes}")
-print(f"  - Produtos únicos: {len(catalogo)}")

@@ -23,14 +23,10 @@ try:
     modelo = RandomForestRegressor(n_estimators=100, random_state=42)
     modelo.fit(X_train, y_train)
 
-    # 4. Avaliação (Métricas para o teu PowerPoint)
+    # 4. Avaliação 
     previsoes = modelo.predict(X_test)
     mae = mean_absolute_error(y_test, previsoes)
     r2 = r2_score(y_test, previsoes)
-
-    print("=== PERFORMANCE DO MODELO ===")
-    print(f"Erro Médio (MAE): {mae:.2f} dias")
-    print(f"Precisão (R2 Score): {r2:.2%}")
 
     # 5. Guardar o Modelo Final
     joblib.dump(modelo, 'modelo_wells.pkl')
@@ -45,7 +41,7 @@ try:
     with open('model_metrics.json', 'w') as f:
         json.dump(metrics, f, indent=2)
     
-    print("\nSucesso: Modelo 'modelo_wells.pkl' guardado e pronto para a Web App!")
+    print("\nSucesso: Modelo 'modelo_wells.pkl' pronto!")
 
 except FileNotFoundError:
     print("Erro: O ficheiro 'data/dados_treino_ia.csv' não existe. Corre o 'processar_dados.py' primeiro.")
