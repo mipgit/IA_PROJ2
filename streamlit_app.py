@@ -51,6 +51,22 @@ def load_data():
     
     return df_transacoes, df_itens, df_treino, df_regras
 
+def calculate_dynamic_predictions(df_treino, modelo):
+    df = df_treino.copy()
+    today = pd.Timestamp.now()
+    
+    # Recalculate days since last purchase 
+    df['Dias_Desde_Ultima_Compra'] = (today - df['Data_Ultima_Compra']).dt.days
+    
+    # Prepare features for prediction
+    X = df[['Dias_Desde_Ultima_Compra', 'Intervalo_Medio_Habito', 'Total_Compras_Historico']].values
+    
+    # Get fresh predictions from trained model
+    df['Target_Dias_Restantes'] = modelo.predict(X)
+    df['Target_Dias_Restantes'] = df['Target_Dias_Restantes'].round(1)
+    
+    return df
+
 @st.cache_data
 def load_metrics():
     try:
@@ -63,6 +79,7 @@ def load_metrics():
 try:
     modelo_recurrence, recommendations = load_models()
     df_transacoes, df_itens, df_treino, df_regras = load_data()
+    df_treino = calculate_dynamic_predictions(df_treino, modelo_recurrence)
     model_metrics = load_metrics()
 except Exception as e:
     st.error(f"Erro ao carregar modelos: {e}")
