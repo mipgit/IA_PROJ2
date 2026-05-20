@@ -100,8 +100,8 @@ if page == "Dashboard Principal":
     
     st.divider()
     
-    # Notification list - customers to notify TODAY
-    st.subheader("Clientes para Notificar HOJE")
+    # Notification list - customers to notify
+    st.subheader("Clientes para Notificar")
     
     # Calculate urgency for each customer-product
     notification_threshold = st.slider(
@@ -137,9 +137,9 @@ if page == "Dashboard Principal":
         df_notify_display = pd.DataFrame(notification_data)
         st.dataframe(df_notify_display, use_container_width=True, hide_index=True)
         
-        st.success(f"✓ {len(df_notify_display)} cliente(s) para notificar!")
+        st.success(f"{len(df_notify_display)} cliente(s) para notificar!")
     else:
-        st.info(f"✓ Nenhum cliente necessita de notificação nos próximos {notification_threshold} dias")
+        st.info(f"Nenhum cliente necessita de notificação nos próximos {notification_threshold} dias")
     
     st.divider()
     
@@ -345,8 +345,6 @@ elif page == "Análise do Modelo":
         st.markdown(f"""
         - **Algoritmo:** Apriori + Association Rules
         - **Métrica:** Confidence (Confiança)
-        - **Min Support:** 5%
-        - **Min Confidence:** 50%
         - **Total de Regras:** {len(df_regras)}
         - **Produtos Analisados:** {df_treino['Produto'].nunique()}
         """)

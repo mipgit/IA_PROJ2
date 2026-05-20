@@ -12,7 +12,7 @@ tres_meses_atras = hoje - timedelta(days=90)  # Últimos 3 meses
 lojas = ['Lisboa-Rossio', 'Porto-NorteShopping', 'Online', 'Coimbra-Alma']
 
 # ============================================================================
-# REALISTIC PRODUCT CATALOG WITH INTENTIONAL CO-PURCHASE PATTERNS
+# PRODUCT CATALOG WITH INTENTIONAL CO-PURCHASE PATTERNS
 # ============================================================================
 
 catalogo = {
