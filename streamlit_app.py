@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import json
 from datetime import datetime
 import plotly.express as px
 import plotly.graph_objects as go
@@ -50,9 +51,19 @@ def load_data():
     
     return df_transacoes, df_itens, df_treino, df_regras
 
+@st.cache_data
+def load_metrics():
+    try:
+        with open('model_metrics.json', 'r') as f:
+            metrics = json.load(f)
+        return metrics
+    except FileNotFoundError:
+        return {'mae_formatted': 'N/A', 'r2_percentage': 'N/A'}
+
 try:
     modelo_recurrence, recommendations = load_models()
     df_transacoes, df_itens, df_treino, df_regras = load_data()
+    model_metrics = load_metrics()
 except Exception as e:
     st.error(f"Erro ao carregar modelos: {e}")
     st.stop()
@@ -337,8 +348,8 @@ elif page == "Análise do Modelo":
         """)
         
         # Show metrics from training
-        st.metric("Erro Médio (MAE)", "10.19 dias", "±2.5")
-        st.metric("Precisão (R²)", "98.75%", "Excelente")
+        st.metric("Erro Médio (MAE)", f"{model_metrics['mae_formatted']} dias", "±2.5")
+        st.metric("Precisão (R²)", f"{model_metrics['r2_percentage']}%", "Excelente")
     
     with col2:
         st.markdown("### Modelo de Recomendações (Apriori)")

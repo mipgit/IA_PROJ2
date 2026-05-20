@@ -1,5 +1,6 @@
 import pandas as pd
 import joblib
+import json
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, r2_score
@@ -33,6 +34,17 @@ try:
 
     # 5. Guardar o Modelo Final
     joblib.dump(modelo, 'modelo_wells.pkl')
+    
+    # 6. Guardar as Métricas em JSON
+    metrics = {
+        'mae': float(mae),
+        'r2': float(r2),
+        'mae_formatted': f"{mae:.2f}",
+        'r2_percentage': f"{r2*100:.2f}"
+    }
+    with open('model_metrics.json', 'w') as f:
+        json.dump(metrics, f, indent=2)
+    
     print("\nSucesso: Modelo 'modelo_wells.pkl' guardado e pronto para a Web App!")
 
 except FileNotFoundError:
