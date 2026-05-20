@@ -44,10 +44,8 @@ for (cid, prod), grupo in df.groupby(['ID_Cliente', 'Produto']):
         # Target: How many days until next purchase?
         target = intervalo_medio - dias_desde_ultima
         
-        # FILTRO: Apenas incluir se última compra está dentro do intervalo médio
-        # Isso garante que Target_Dias_Restantes sempre seja >= 0
-        # (ou muito próximo, considerando variação)
-        if dias_desde_ultima <= intervalo_medio * 1.1:  # Permite até 10% de variação
+        # FILTRO: Incluir todos os registos, mesmo com Target negativo (cliente atrasado)
+        if dias_desde_ultima <= intervalo_medio * 1.5:  # Permite até 50% de variação (inclui atrasados)
             # Get product info from last purchase
             categoria = grupo['Categoria'].iloc[-1]
             preco = grupo['Preco_Unitario'].iloc[-1]
@@ -62,7 +60,7 @@ for (cid, prod), grupo in df.groupby(['ID_Cliente', 'Produto']):
                 'Dias_Desde_Ultima_Compra': dias_desde_ultima,
                 'Total_Compras_Historico': len(grupo),
                 'Preco_Unitario': preco,
-                'Target_Dias_Restantes': round(max(target, 0), 1),  # Garantir >= 0
+                'Target_Dias_Restantes': round(target, 1), 
                 'Data_Ultima_Compra': ultima_compra.strftime('%Y-%m-%d')
             })
 

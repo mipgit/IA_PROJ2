@@ -65,6 +65,9 @@ def calculate_dynamic_predictions(df_treino, modelo):
     df['Target_Dias_Restantes'] = modelo.predict(X)
     df['Target_Dias_Restantes'] = df['Target_Dias_Restantes'].round(1)
     
+    # Convert -0.0 to 0.0 using threshold (floating point rounding artifact)
+    df.loc[df['Target_Dias_Restantes'].abs() < 0.5, 'Target_Dias_Restantes'] = 0.0
+    
     return df
 
 @st.cache_data
@@ -153,12 +156,28 @@ if page == "Dashboard Principal":
             
             top_recos = ", ".join([f"{r['produto']}" for r in recos[:2]]) if recos else "Sem recomendações"
             
+            dias_restantes = float(row['Target_Dias_Restantes'])
+            
+            # Handle -0.0 display issue: convert to int to eliminate negative zero
+            if abs(dias_restantes) < 0.5:
+                dias_restantes = 0
+            
+            # Urgency levels with support for negative (overdue)
+            if dias_restantes < 0:
+                urgencia = '🔴 ATRASADO'
+            elif dias_restantes <= 3:
+                urgencia = '🔴 ALTA'
+            elif dias_restantes <= 9:
+                urgencia = '🟡 MÉDIA'
+            else:
+                urgencia = '🟢 BAIXA'
+            
             notification_data.append({
                 'Cliente': row['ID_Cliente'],
                 'Produto': produto,
-                'Dias Restantes': int(row['Target_Dias_Restantes']),
+                'Dias Restantes': str(int(dias_restantes)),
                 'Última Compra': row['Data_Ultima_Compra'],
-                'Urgência': '🔴 ALTA' if row['Target_Dias_Restantes'] <= 3 else '🟡 MÉDIA' if row['Target_Dias_Restantes'] <= 9 else '🟢 BAIXA',
+                'Urgência': urgencia,
                 'Recomendações': top_recos
             })
         
@@ -177,8 +196,12 @@ if page == "Dashboard Principal":
     with col1:
         # Distribution of days remaining
         st.subheader("Distribuição de Dias Restantes")
+        
+        df_chart = df_treino.copy()
+        df_chart.loc[df_chart['Target_Dias_Restantes'].abs() < 0.5, 'Target_Dias_Restantes'] = 0.0
+        
         fig = px.histogram(
-            df_treino,
+            df_chart,
             x='Target_Dias_Restantes',
             nbins=20,
             title="Quantos dias até a próxima compra?",
@@ -230,6 +253,10 @@ elif page == "Previsões de Recorrência":
                 
                 with col_info:
                     dias_restantes = row['Target_Dias_Restantes']
+                    
+                    # Handle -0.0 display issue
+                    if abs(dias_restantes) < 0.5:
+                        dias_restantes = 0.0
                     
                     st.metric("Dias Restantes", f"{dias_restantes:.0f}")
                 
