@@ -153,9 +153,9 @@ for produto in recommendations:
     )[:3]  # Keep top 3
 
 # Save recommendations
-joblib.dump(recommendations, 'modelo_recomendacoes.pkl')
+joblib.dump(recommendations, 'models/modelo_recomendacoes.pkl')
 
-print(f"✓ Modelo de recomendações guardado em 'modelo_recomendacoes.pkl'")
+print(f"✓ Modelo de recomendações guardado em 'models/modelo_recomendacoes.pkl'")
 print(f"  - Produtos com recomendações: {len(recommendations)}")
 
 print(f"\n{'='*80}")

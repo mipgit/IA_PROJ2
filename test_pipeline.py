@@ -10,7 +10,7 @@ import joblib
 import numpy as np
 
 print("="*80)
-print("VERIFICAÇÃO DO PIPELINE WELLS")
+print("VERIFICAÇÃO DO PIPELINE WELLS - 4 Modelos ML")
 print("="*80)
 
 # Test 1: Check data files
@@ -33,47 +33,49 @@ for f in files_to_check:
 # Test 2: Load trained models
 print("\n✓ CARREGANDO MODELOS TREINADOS...")
 
-try:
-    modelo = joblib.load('modelo_wells.pkl')
-    print(f"  ✓ modelo_wells.pkl carregado")
-except Exception as e:
-    print(f"  ✗ modelo_wells.pkl: {e}")
-    sys.exit(1)
+models_to_test = {
+    'models/modelo_wells.pkl': 'Modelo Principal (melhor)',
+    'models/modelo_linear.pkl': 'Regressão Linear',
+    'models/modelo_dt.pkl': 'Árvore Decisão',
+    'models/modelo_rf.pkl': 'Random Forest',
+    'models/modelo_gb.pkl': 'Gradient Boosting',
+    'models/modelo_recomendacoes.pkl': 'Recomendações'
+}
 
-try:
-    recommendations = joblib.load('modelo_recomendacoes.pkl')
-    print(f"  ✓ modelo_recomendacoes.pkl carregado ({len(recommendations)} produtos)")
-except Exception as e:
-    print(f"  ✗ modelo_recomendacoes.pkl: {e}")
-    sys.exit(1)
+loaded_models = {}
+for fname, desc in models_to_test.items():
+    try:
+        model = joblib.load(fname)
+        loaded_models[fname] = model
+        print(f"  ✓ {fname} ({desc})")
+    except Exception as e:
+        print(f"  ✗ {fname}: {e}")
+        sys.exit(1)
 
-# Test 3: Test recurrence model prediction
-print("\n✓ TESTANDO MODELO DE RECORRÊNCIA...")
+# Test 3: Test all regression models
+print("\n✓ TESTANDO TODOS OS MODELOS DE RECORRÊNCIA...")
 
 df_treino = pd.read_csv('data/dados_treino_ia.csv')
 X_test = df_treino[['Dias_Desde_Ultima_Compra', 'Intervalo_Medio_Habito', 'Total_Compras_Historico']].head(5)
+y_test = df_treino['Target_Dias_Restantes'].head(5)
 
-try:
-    predictions = modelo.predict(X_test)
-    print(f"  ✓ Previsões geradas: {len(predictions)} (média: {predictions.mean():.1f} dias)")
-    
-    # Show sample prediction
-    print(f"\n  Exemplo de Previsão:")
-    for i, (_, row) in enumerate(df_treino.head(3).iterrows()):
-        X = np.array([[
-            row['Dias_Desde_Ultima_Compra'],
-            row['Intervalo_Medio_Habito'],
-            row['Total_Compras_Historico']
-        ]])
-        pred = modelo.predict(X)[0]
-        print(f"    - {row['Produto']}: {pred:.1f} dias até próxima compra")
-except Exception as e:
-    print(f"  ✗ Erro na previsão: {e}")
-    sys.exit(1)
+regression_models = {
+    'models/modelo_linear.pkl': 'Regressão Linear',
+    'models/modelo_dt.pkl': 'Árvore Decisão',
+    'models/modelo_rf.pkl': 'Random Forest',
+    'models/modelo_gb.pkl': 'Gradient Boosting',
+    'models/modelo_wells.pkl': 'Melhor Modelo'
+}
+
+print(f"\n  Predições para os primeiros 5 exemplos:")
+for fname, label in regression_models.items():
+    model = loaded_models[fname]
+    predictions = model.predict(X_test)
+    print(f"  {label:20}: {[f'{p:.1f}' for p in predictions]}")
 
 # Test 4: Test recommendations
 print("\n✓ TESTANDO RECOMENDAÇÕES...")
-
+recommendations = loaded_models['models/modelo_recomendacoes.pkl']
 sample_produtos = list(recommendations.keys())[:3]
 for prod in sample_produtos:
     recos = recommendations[prod]
@@ -108,7 +110,7 @@ except Exception as e:
     sys.exit(1)
 
 print("\n" + "="*80)
-print("✓ TUDO VERIFICADO COM SUCESSO!")
+print("✓ TUDO VERIFICADO COM SUCESSO! (4 modelos ML + recomendações)")
 print("="*80)
 print("\nPara iniciar a aplicação, execute:")
 print("  streamlit run streamlit_app.py")

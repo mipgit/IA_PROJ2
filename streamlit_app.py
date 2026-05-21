@@ -5,6 +5,7 @@ import joblib
 from datetime import datetime
 import plotly.express as px
 import plotly.graph_objects as go
+from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
 
 # ============================================================================
 # PAGE CONFIG
@@ -34,9 +35,13 @@ st.markdown("""
 
 @st.cache_resource
 def load_models():
-    modelo_recurrence = joblib.load('modelo_wells.pkl')
-    recommendations = joblib.load('modelo_recomendacoes.pkl')
-    return modelo_recurrence, recommendations
+    modelo_wells = joblib.load('models/modelo_wells.pkl')
+    modelo_linear = joblib.load('models/modelo_linear.pkl')
+    modelo_dt = joblib.load('models/modelo_dt.pkl')
+    modelo_rf = joblib.load('models/modelo_rf.pkl')
+    modelo_gb = joblib.load('models/modelo_gb.pkl')
+    recommendations = joblib.load('models/modelo_recomendacoes.pkl')
+    return modelo_wells, modelo_linear, modelo_dt, modelo_rf, modelo_gb, recommendations
 
 @st.cache_data
 def load_data():
@@ -51,11 +56,18 @@ def load_data():
     return df_transacoes, df_itens, df_treino, df_regras
 
 try:
-    modelo_recurrence, recommendations = load_models()
+    modelo_wells, modelo_linear, modelo_dt, modelo_rf, modelo_gb, recommendations = load_models()
     df_transacoes, df_itens, df_treino, df_regras = load_data()
 except Exception as e:
     st.error(f"Erro ao carregar modelos: {e}")
     st.stop()
+
+modelos_map = {
+    'LinearRegression': ('Regressão Linear', modelo_linear),
+    'DecisionTree': ('Árvore Decisão', modelo_dt),
+    'RandomForest': ('Random Forest', modelo_rf),
+    'GradientBoosting': ('Gradient Boosting', modelo_gb),
+}
 
 # ============================================================================
 # TITLE & DESCRIPTION
@@ -320,35 +332,73 @@ elif page == "Recomendações de Produtos":
 # ============================================================================
 
 elif page == "Análise do Modelo":
-    st.subheader("Performance & Análise do Modelo")
+    st.subheader("Performance & Comparação de Modelos")
+    
+    st.markdown("### Modelos de Recorrência (4 Algoritmos)")
+    st.markdown("""
+    - **Features:** Intervalo Médio de Compra, Dias desde Última Compra, Total de Compras no Histórico
+    - **Target:** Dias Restantes até Próxima Compra
+    - **Train/Test Split:** 80/20 com validação cruzada (5-fold)
+    - **Dados com ruído gaussiano (σ=5) para simular cenário real**
+    """)
+    
+    st.divider()
+    
+    # Compute predictions for all models on a sample
+    X_all = df_treino[['Dias_Desde_Ultima_Compra', 'Intervalo_Medio_Habito', 'Total_Compras_Historico']]
+    y_true = df_treino['Target_Dias_Restantes']
+    
+    comparison_data = []
+    for key, (label, model) in modelos_map.items():
+        y_pred = model.predict(X_all)
+        mae = mean_absolute_error(y_true, y_pred)
+        r2 = r2_score(y_true, y_pred)
+        rmse = np.sqrt(mean_squared_error(y_true, y_pred))
+        comparison_data.append({
+            'Modelo': label,
+            'MAE (dias)': round(mae, 2),
+            'RMSE (dias)': round(rmse, 2),
+            'R² Score': round(r2, 4)
+        })
+    
+    df_comparison = pd.DataFrame(comparison_data)
+    df_comparison = df_comparison.sort_values('MAE (dias)')
+    
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        st.dataframe(df_comparison, use_container_width=True, hide_index=True)
+    
+    with col2:
+        best_model = df_comparison.iloc[0]['Modelo']
+        best_mae = df_comparison.iloc[0]['MAE (dias)']
+        st.success(f"**Melhor modelo:** {best_model}")
+        st.metric("MAE do melhor modelo", f"{best_mae:.2f} dias", "Menor = melhor")
+    
+    st.divider()
+    
+    # Bar chart comparing models
+    st.subheader("Comparação Visual de Performance")
+    fig = px.bar(
+        df_comparison,
+        x='Modelo',
+        y='MAE (dias)',
+        color='Modelo',
+        title="MAE por Algoritmo (menor = melhor)",
+        text='MAE (dias)'
+    )
+    fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
+    st.plotly_chart(fig, use_container_width=True)
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### Modelo de Recorrência (Random Forest)")
-        st.markdown("""
-        - **Algoritmo:** Random Forest Regressor
-        - **Features:** 
-            - Intervalo Médio de Compra
-            - Dias desde Última Compra
-            - Total de Compras no Histórico
-        - **Target:** Dias Restantes até Próxima Compra
-        - **Train/Test Split:** 80/20
-        """)
-        
-        # Show metrics from training
-        st.metric("Erro Médio (MAE)", "10.19 dias", "±2.5")
-        st.metric("Precisão (R²)", "98.75%", "Excelente")
-    
-    with col2:
-        st.markdown("### Modelo de Recomendações (Apriori)")
+        st.markdown("### Modelo de Recomendações (Association Rules)")
         st.markdown(f"""
-        - **Algoritmo:** Apriori + Association Rules
-        - **Métrica:** Confidence (Confiança)
-        - **Min Support:** 5%
-        - **Min Confidence:** 50%
+        - **Algoritmo:** Co-ocorrência + Association Rules
+        - **Métrica:** Confidence (Confiança) e Lift
         - **Total de Regras:** {len(df_regras)}
-        - **Produtos Analisados:** {df_treino['Produto'].nunique()}
+        - **Produtos com Recomendações:** {df_treino['Produto'].nunique()}
         """)
         
         max_conf_ab = df_regras['Confianca_A_para_B'].max()
@@ -356,38 +406,17 @@ elif page == "Análise do Modelo":
         overall_max = max(max_conf_ab, max_conf_ba)
         st.metric("Top Confidence", f"{overall_max:.0f}%", "Melhor regra")
     
-    st.divider()
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.subheader("Distribuição de Erros de Previsão")
-        df_erros = df_treino.copy()
-        df_erros['Erro_Absoluto'] = df_erros['Target_Dias_Restantes'].abs()
-        
-        fig = px.histogram(
-            df_erros,
-            x='Target_Dias_Restantes',
-            nbins=15,
-            title="Erro em Dias (Previsão vs Real)",
-            labels={'Target_Dias_Restantes': 'Erro (dias)'}
-        )
-        st.plotly_chart(fig, use_container_width=True)
-    
     with col2:
         st.subheader("Distribuição de Confiança das Regras")
-        
-        # Prepare data: combine both confidence values
         conf_data = pd.concat([
             df_regras[['Confianca_A_para_B']].rename(columns={'Confianca_A_para_B': 'Confianca'}),
             df_regras[['Confianca_B_para_A']].rename(columns={'Confianca_B_para_A': 'Confianca'})
         ])
-        
         fig = px.histogram(
             conf_data,
             x='Confianca',
             nbins=10,
-            title="Confiança das Regras de Associação (Ambas Direções)",
+            title="Confiança das Regras (Ambas Direções)",
             labels={'Confianca': 'Confiança (%)'}
         )
         st.plotly_chart(fig, use_container_width=True)

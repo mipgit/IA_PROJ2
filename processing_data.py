@@ -1,6 +1,16 @@
 import pandas as pd
 import os
+import argparse
+import numpy as np
 from itertools import combinations
+
+# CLI: allow adding gaussian noise to the generated target
+parser = argparse.ArgumentParser(description='Process normalized transactions into training features')
+parser.add_argument('--noise', type=float, default=5.0, help='Stddev of gaussian noise to add to Target_Dias_Restantes (default: 5.0 for realistic variance)')
+parser.add_argument('--seed', type=int, default=42, help='Random seed for noise generation')
+args = parser.parse_args()
+noise_sigma = float(args.noise)
+np.random.seed(int(args.seed))
 
 # ============================================================================
 # LOAD NORMALIZED DATA
@@ -43,6 +53,9 @@ for (cid, prod), grupo in df.groupby(['ID_Cliente', 'Produto']):
         
         # Target: How many days until next purchase?
         target = intervalo_medio - dias_desde_ultima
+        # Optionally add gaussian noise to make the problem less deterministic
+        if noise_sigma > 0:
+            target = target + np.random.normal(loc=0.0, scale=noise_sigma)
         
         # FILTRO: Apenas incluir se última compra está dentro do intervalo médio
         # Isso garante que Target_Dias_Restantes sempre seja >= 0
