@@ -69,6 +69,11 @@ modelos_map = {
     'GradientBoosting': ('Gradient Boosting', modelo_gb),
 }
 
+modelo_keys = list(modelos_map.keys())
+default_idx = modelo_keys.index('GradientBoosting')
+
+FEATURES = ['Dias_Desde_Ultima_Compra', 'Intervalo_Medio_Habito', 'Total_Compras_Historico']
+
 # ============================================================================
 # TITLE & DESCRIPTION
 # ============================================================================
@@ -80,13 +85,23 @@ st.title("Wells - Sistema de Recorrência & Recomendações")
 # SIDEBAR - NAVIGATION
 # ============================================================================
 
-# st.sidebar.title("Wells - Sistema de Recorrência & Recomendações")
 page = st.sidebar.radio("Selecione uma página:", [
     "Dashboard Principal",
     "Previsões de Recorrência",
     "Recomendações de Produtos",
     "Análise do Modelo"
 ])
+
+if 'algo_key' not in st.session_state:
+    st.session_state.algo_key = 'GradientBoosting'
+
+algo_key = st.session_state.algo_key
+modelo_ativo = modelos_map[algo_key][1]
+modelo_label = modelos_map[algo_key][0]
+
+# Precompute predictions for the selected model
+df_pred = df_treino.copy()
+df_pred['Previsao_Dias_Restantes'] = modelo_ativo.predict(df_treino[FEATURES])
 
 
 # ============================================================================
@@ -112,6 +127,22 @@ if page == "Dashboard Principal":
     
     st.divider()
     
+    # Model selection
+    st.subheader("⚙️ Selecionar Algoritmo de Previsão")
+    col_algo = st.columns([2, 4])
+    with col_algo[0]:
+        novo_algo = st.selectbox(
+            "Algoritmo:",
+            options=modelo_keys,
+            format_func=lambda k: modelos_map[k][0],
+            index=modelo_keys.index(st.session_state.algo_key),
+            key='algo_selector',
+        )
+        if novo_algo != st.session_state.algo_key:
+            st.session_state.algo_key = novo_algo
+            st.rerun()
+    st.divider()
+    
     # Notification list - customers to notify TODAY
     st.subheader("Clientes para Notificar HOJE")
     
@@ -124,8 +155,8 @@ if page == "Dashboard Principal":
         step=1
     )
     
-    df_notify = df_treino[df_treino['Target_Dias_Restantes'] <= notification_threshold].copy()
-    df_notify = df_notify.sort_values('Target_Dias_Restantes')
+    df_notify = df_pred[df_pred['Previsao_Dias_Restantes'] <= notification_threshold].copy()
+    df_notify = df_notify.sort_values('Previsao_Dias_Restantes')
     
     if len(df_notify) > 0:
         # Get top recommendations for each product
@@ -140,9 +171,10 @@ if page == "Dashboard Principal":
             notification_data.append({
                 'Cliente': row['ID_Cliente'],
                 'Produto': produto,
-                'Dias Restantes': int(row['Target_Dias_Restantes']),
+                'Previsão (dias)': int(row['Previsao_Dias_Restantes']),
+                'Valor Real (dias)': int(row['Target_Dias_Restantes']),
                 'Última Compra': row['Data_Ultima_Compra'],
-                'Urgência': '🔴 ALTA' if row['Target_Dias_Restantes'] <= 3 else '🟡 MÉDIA' if row['Target_Dias_Restantes'] <= 9 else '🟢 BAIXA',
+                'Urgência': '🔴 ALTA' if row['Previsao_Dias_Restantes'] <= 3 else '🟡 MÉDIA' if row['Previsao_Dias_Restantes'] <= 9 else '🟢 BAIXA',
                 'Recomendações': top_recos
             })
         
@@ -159,14 +191,16 @@ if page == "Dashboard Principal":
     col1, col2 = st.columns(2)
     
     with col1:
-        # Distribution of days remaining
         st.subheader("Distribuição de Dias Restantes")
+        dist_df = pd.DataFrame({
+            'Previsão': df_pred['Previsao_Dias_Restantes'],
+            'Real': df_treino['Target_Dias_Restantes'],
+        }).melt(var_name='Tipo', value_name='Dias')
         fig = px.histogram(
-            df_treino,
-            x='Target_Dias_Restantes',
-            nbins=20,
-            title="Quantos dias até a próxima compra?",
-            labels={'Target_Dias_Restantes': 'Dias Restantes'}
+            dist_df, x='Dias', color='Tipo',
+            nbins=20, barmode='overlay',
+            title="Previsão vs Real",
+            opacity=0.7,
         )
         st.plotly_chart(fig, use_container_width=True)
     
@@ -188,17 +222,15 @@ if page == "Dashboard Principal":
 
 elif page == "Previsões de Recorrência":
     st.subheader("Previsões de Recorrência por Cliente")
+    st.caption(f"Modelo ativo: **{modelo_label}**")
     
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        cliente_id = st.selectbox(
-            "Selecione um cliente:",
-            sorted(df_treino['ID_Cliente'].unique())
-        )
+    cliente_id = st.selectbox(
+        "Selecione um cliente:",
+        sorted(df_treino['ID_Cliente'].unique())
+    )
     
     # Filter data for selected customer
-    df_cliente = df_treino[df_treino['ID_Cliente'] == cliente_id].sort_values('Target_Dias_Restantes')
+    df_cliente = df_pred[df_pred['ID_Cliente'] == cliente_id].sort_values('Previsao_Dias_Restantes')
     
     if len(df_cliente) > 0:
         st.markdown(f"### Cliente {cliente_id}")
@@ -213,9 +245,15 @@ elif page == "Previsões de Recorrência":
                     st.caption(f"{row['Categoria']} | {row['Marca']}")
                 
                 with col_info:
-                    dias_restantes = row['Target_Dias_Restantes']
-                    
-                    st.metric("Dias Restantes", f"{dias_restantes:.0f}")
+                    pred = row['Previsao_Dias_Restantes']
+                    real = row['Target_Dias_Restantes']
+                    erro = abs(pred - real)
+                    st.metric(
+                        "Previsão",
+                        f"{pred:.0f} dias",
+                        delta=f"Real: {real:.0f} dias (erro: {erro:.0f})",
+                        delta_color="off",
+                    )
                 
                 # Additional info
                 col_a, col_b, col_c = st.columns(3)
