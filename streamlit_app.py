@@ -39,7 +39,6 @@ def load_models():
     recommendations = joblib.load('modelo_recomendacoes.pkl')
     return modelo_recurrence, recommendations
 
-@st.cache_data
 def load_data():
     df_transacoes = pd.read_csv('data/transacoes.csv')
     df_itens = pd.read_csv('data/itens_transacao.csv')
@@ -53,19 +52,19 @@ def load_data():
 
 def calculate_dynamic_predictions(df_treino, modelo):
     df = df_treino.copy()
+    
+    # Reference date: when the CSV was generated (date of latest purchase in data)
+    reference_date = df['Data_Ultima_Compra'].max()
     today = pd.Timestamp.now()
     
-    # Recalculate days since last purchase 
-    df['Dias_Desde_Ultima_Compra'] = (today - df['Data_Ultima_Compra']).dt.days
+    # Calculate days passed since CSV was generated
+    days_passed = (today.date() - reference_date.date()).days
     
-    # Prepare features for prediction
-    X = df[['Dias_Desde_Ultima_Compra', 'Intervalo_Medio_Habito', 'Total_Compras_Historico']].values
-    
-    # Get fresh predictions from trained model
-    df['Target_Dias_Restantes'] = modelo.predict(X)
+    # Update Target_Dias_Restantes: subtract days that have passed
+    df['Target_Dias_Restantes'] = df['Target_Dias_Restantes'] - days_passed
     df['Target_Dias_Restantes'] = df['Target_Dias_Restantes'].round(1)
     
-    # Convert -0.0 to 0.0 using threshold (floating point rounding artifact)
+    # Convert -0.0 to 0.0 and handle negative values
     df.loc[df['Target_Dias_Restantes'].abs() < 0.5, 'Target_Dias_Restantes'] = 0.0
     
     return df
