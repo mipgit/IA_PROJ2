@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import json
 from datetime import datetime
 import plotly.express as px
 import plotly.graph_objects as go
@@ -50,9 +51,39 @@ def load_data():
     
     return df_transacoes, df_itens, df_treino, df_regras
 
+def calculate_dynamic_predictions(df_treino, modelo):
+    df = df_treino.copy()
+    today = pd.Timestamp.now()
+    
+    # Recalculate days since last purchase 
+    df['Dias_Desde_Ultima_Compra'] = (today - df['Data_Ultima_Compra']).dt.days
+    
+    # Prepare features for prediction
+    X = df[['Dias_Desde_Ultima_Compra', 'Intervalo_Medio_Habito', 'Total_Compras_Historico']].values
+    
+    # Get fresh predictions from trained model
+    df['Target_Dias_Restantes'] = modelo.predict(X)
+    df['Target_Dias_Restantes'] = df['Target_Dias_Restantes'].round(1)
+    
+    # Convert -0.0 to 0.0 using threshold (floating point rounding artifact)
+    df.loc[df['Target_Dias_Restantes'].abs() < 0.5, 'Target_Dias_Restantes'] = 0.0
+    
+    return df
+
+@st.cache_data
+def load_metrics():
+    try:
+        with open('model_metrics.json', 'r') as f:
+            metrics = json.load(f)
+        return metrics
+    except FileNotFoundError:
+        return {'mae_formatted': 'N/A', 'r2_percentage': 'N/A'}
+
 try:
     modelo_recurrence, recommendations = load_models()
     df_transacoes, df_itens, df_treino, df_regras = load_data()
+    df_treino = calculate_dynamic_predictions(df_treino, modelo_recurrence)
+    model_metrics = load_metrics()
 except Exception as e:
     st.error(f"Erro ao carregar modelos: {e}")
     st.stop()
@@ -100,8 +131,8 @@ if page == "Dashboard Principal":
     
     st.divider()
     
-    # Notification list - customers to notify TODAY
-    st.subheader("Clientes para Notificar HOJE")
+    # Notification list - customers to notify
+    st.subheader("Clientes para Notificar")
     
     # Calculate urgency for each customer-product
     notification_threshold = st.slider(
@@ -125,21 +156,37 @@ if page == "Dashboard Principal":
             
             top_recos = ", ".join([f"{r['produto']}" for r in recos[:2]]) if recos else "Sem recomendações"
             
+            dias_restantes = float(row['Target_Dias_Restantes'])
+            
+            # Handle -0.0 display issue: convert to int to eliminate negative zero
+            if abs(dias_restantes) < 0.5:
+                dias_restantes = 0
+            
+            # Urgency levels with support for negative (overdue)
+            if dias_restantes < 0:
+                urgencia = '🔴 ATRASADO'
+            elif dias_restantes <= 3:
+                urgencia = '🔴 ALTA'
+            elif dias_restantes <= 9:
+                urgencia = '🟡 MÉDIA'
+            else:
+                urgencia = '🟢 BAIXA'
+            
             notification_data.append({
                 'Cliente': row['ID_Cliente'],
                 'Produto': produto,
-                'Dias Restantes': int(row['Target_Dias_Restantes']),
+                'Dias Restantes': str(int(dias_restantes)),
                 'Última Compra': row['Data_Ultima_Compra'],
-                'Urgência': '🔴 ALTA' if row['Target_Dias_Restantes'] <= 3 else '🟡 MÉDIA' if row['Target_Dias_Restantes'] <= 9 else '🟢 BAIXA',
+                'Urgência': urgencia,
                 'Recomendações': top_recos
             })
         
         df_notify_display = pd.DataFrame(notification_data)
         st.dataframe(df_notify_display, use_container_width=True, hide_index=True)
         
-        st.success(f"✓ {len(df_notify_display)} cliente(s) para notificar!")
+        st.success(f"{len(df_notify_display)} cliente(s) para notificar!")
     else:
-        st.info(f"✓ Nenhum cliente necessita de notificação nos próximos {notification_threshold} dias")
+        st.info(f"Nenhum cliente necessita de notificação nos próximos {notification_threshold} dias")
     
     st.divider()
     
@@ -149,8 +196,12 @@ if page == "Dashboard Principal":
     with col1:
         # Distribution of days remaining
         st.subheader("Distribuição de Dias Restantes")
+        
+        df_chart = df_treino.copy()
+        df_chart.loc[df_chart['Target_Dias_Restantes'].abs() < 0.5, 'Target_Dias_Restantes'] = 0.0
+        
         fig = px.histogram(
-            df_treino,
+            df_chart,
             x='Target_Dias_Restantes',
             nbins=20,
             title="Quantos dias até a próxima compra?",
@@ -202,6 +253,10 @@ elif page == "Previsões de Recorrência":
                 
                 with col_info:
                     dias_restantes = row['Target_Dias_Restantes']
+                    
+                    # Handle -0.0 display issue
+                    if abs(dias_restantes) < 0.5:
+                        dias_restantes = 0.0
                     
                     st.metric("Dias Restantes", f"{dias_restantes:.0f}")
                 
@@ -337,16 +392,14 @@ elif page == "Análise do Modelo":
         """)
         
         # Show metrics from training
-        st.metric("Erro Médio (MAE)", "10.19 dias", "±2.5")
-        st.metric("Precisão (R²)", "98.75%", "Excelente")
+        st.metric("Erro Médio (MAE)", f"{model_metrics['mae_formatted']} dias", "±2.5")
+        st.metric("Precisão (R²)", f"{model_metrics['r2_percentage']}%", "Excelente")
     
     with col2:
         st.markdown("### Modelo de Recomendações (Apriori)")
         st.markdown(f"""
         - **Algoritmo:** Apriori + Association Rules
         - **Métrica:** Confidence (Confiança)
-        - **Min Support:** 5%
-        - **Min Confidence:** 50%
         - **Total de Regras:** {len(df_regras)}
         - **Produtos Analisados:** {df_treino['Produto'].nunique()}
         """)

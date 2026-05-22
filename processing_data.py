@@ -7,7 +7,7 @@ from itertools import combinations
 # ============================================================================
 
 if not os.path.exists('data/transacoes.csv') or not os.path.exists('data/itens_transacao.csv'):
-    print("Erro: Corre primeiro o script.py!")
+    print("Erro: Corre primeiro o script.py")
     exit()
 
 df_transacoes = pd.read_csv('data/transacoes.csv')
@@ -44,10 +44,8 @@ for (cid, prod), grupo in df.groupby(['ID_Cliente', 'Produto']):
         # Target: How many days until next purchase?
         target = intervalo_medio - dias_desde_ultima
         
-        # FILTRO: Apenas incluir se última compra está dentro do intervalo médio
-        # Isso garante que Target_Dias_Restantes sempre seja >= 0
-        # (ou muito próximo, considerando variação)
-        if dias_desde_ultima <= intervalo_medio * 1.1:  # Permite até 10% de variação
+        # FILTRO: Incluir todos os registos, mesmo com Target negativo (cliente atrasado)
+        if dias_desde_ultima <= intervalo_medio * 1.5:  # Permite até 50% de variação (inclui atrasados)
             # Get product info from last purchase
             categoria = grupo['Categoria'].iloc[-1]
             preco = grupo['Preco_Unitario'].iloc[-1]
@@ -62,14 +60,12 @@ for (cid, prod), grupo in df.groupby(['ID_Cliente', 'Produto']):
                 'Dias_Desde_Ultima_Compra': dias_desde_ultima,
                 'Total_Compras_Historico': len(grupo),
                 'Preco_Unitario': preco,
-                'Target_Dias_Restantes': round(max(target, 0), 1),  # Garantir >= 0
+                'Target_Dias_Restantes': round(target, 1), 
                 'Data_Ultima_Compra': ultima_compra.strftime('%Y-%m-%d')
             })
 
 df_treino = pd.DataFrame(features_recurrence)
 df_treino.to_csv('data/dados_treino_ia.csv', index=False)
-
-print(f"✓ Dados de treino: {len(df_treino)} exemplos em 'data/dados_treino_ia.csv'")
 
 # ============================================================================
 # FEATURE ENGINEERING FOR CO-PURCHASE/ASSOCIATION RULES
@@ -108,8 +104,5 @@ if len(df_cocompras) > 0:
     pair_freq = pair_freq.sort_values('Frequencia', ascending=False)
     
     pair_freq.to_csv('data/dados_cocompra.csv', index=False)
-    print(f"✓ Dados de co-compra: {len(pair_freq)} pares únicos em 'data/dados_cocompra.csv'")
 else:
-    print("⚠ Sem co-compras para analisar (transações com apenas 1 produto)")
-
-print("\n✓ Processamento concluído!")
+    print("Sem co-compras para analisar (transações com apenas 1 produto)")

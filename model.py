@@ -1,5 +1,6 @@
 import pandas as pd
 import joblib
+import json
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, r2_score
@@ -22,18 +23,25 @@ try:
     modelo = RandomForestRegressor(n_estimators=100, random_state=42)
     modelo.fit(X_train, y_train)
 
-    # 4. Avaliação (Métricas para o teu PowerPoint)
+    # 4. Avaliação 
     previsoes = modelo.predict(X_test)
     mae = mean_absolute_error(y_test, previsoes)
     r2 = r2_score(y_test, previsoes)
 
-    print("=== PERFORMANCE DO MODELO ===")
-    print(f"Erro Médio (MAE): {mae:.2f} dias")
-    print(f"Precisão (R2 Score): {r2:.2%}")
-
     # 5. Guardar o Modelo Final
     joblib.dump(modelo, 'modelo_wells.pkl')
-    print("\nSucesso: Modelo 'modelo_wells.pkl' guardado e pronto para a Web App!")
+    
+    # 6. Guardar as Métricas em JSON
+    metrics = {
+        'mae': float(mae),
+        'r2': float(r2),
+        'mae_formatted': f"{mae:.2f}",
+        'r2_percentage': f"{r2*100:.2f}"
+    }
+    with open('model_metrics.json', 'w') as f:
+        json.dump(metrics, f, indent=2)
+    
+    print("\nSucesso: Modelo 'modelo_wells.pkl' pronto!")
 
 except FileNotFoundError:
     print("Erro: O ficheiro 'data/dados_treino_ia.csv' não existe. Corre o 'processar_dados.py' primeiro.")
