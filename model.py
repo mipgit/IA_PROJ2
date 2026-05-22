@@ -18,19 +18,11 @@ N_ITER = 20
 FEATURES = ['Dias_Desde_Ultima_Compra', 'Intervalo_Medio_Habito', 'Total_Compras_Historico']
 TARGET = 'Target_Dias_Restantes'
 
-# ============================================================================
-# DATA LOADING
-# ============================================================================
-
 def load_data():
-    df = pd.read_csv('data/dados_treino_ia.csv')
+    df = pd.read_csv('data/dados_treino.csv')
     X = df[FEATURES]
     y = df[TARGET]
     return X, y
-
-# ============================================================================
-# MODELS REGISTRY — define all models and their hyperparameter grids
-# ============================================================================
 
 def baseline_predict(X_df):
     pred = (X_df['Intervalo_Medio_Habito'] - X_df['Dias_Desde_Ultima_Compra']).clip(lower=0)
@@ -82,10 +74,6 @@ MODELS = [
     },
 ]
 
-# ============================================================================
-# TRAINING
-# ============================================================================
-
 def train_model(model_def, X_train, y_train):
     if model_def['params']:
         rs = RandomizedSearchCV(
@@ -123,17 +111,12 @@ def print_comparison(results):
     for name, m in results.items():
         print(f"{name:20} {m['MAE']:8.3f} {m['RMSE']:8.3f} {m['R2']:8.3f}")
 
-# ============================================================================
-# MAIN
-# ============================================================================
-
 def main():
     X, y = load_data()
     X_train, _, y_train, _ = train_test_split(X, y, test_size=TEST_SIZE, random_state=RANDOM_STATE)
 
     results = {}
 
-    # Baseline
     y_pred_baseline = baseline_predict(X)
     results['Baseline'] = {
         'MAE': mean_absolute_error(y, y_pred_baseline),
@@ -142,14 +125,12 @@ def main():
     }
     print(f"  ✓ Baseline (fórmula determinística)")
 
-    # Train + evaluate each model
     for model_def in MODELS:
         trained = train_model(model_def, X_train, y_train)
         metrics = evaluate_model(trained, X, y)
         results[model_def['key']] = metrics
         joblib.dump(trained, model_def['file'])
 
-    # Pick best and copy to modelo_wells.pkl
     valid = {k: v for k, v in results.items() if k != 'Baseline'}
     best_key = min(valid, key=lambda k: valid[k]['MAE'])
     best_file = next(m['file'] for m in MODELS if m['key'] == best_key)

@@ -24,7 +24,7 @@ script.py                 → Generate synthetic data (40 clients, 12 products)
                           └─ data/itens_transacao.csv (~790 items)
                                     ↓
 processing_data.py        → Extract features with gaussian noise (σ=5)
-                          ├─ data/dados_treino_ia.csv (recurrence model)
+                          ├─ data/dados_treino.csv (recurrence model)
                           └─ data/dados_cocompra.csv (raw co-purchase data)
                                     ↓
           ┌─────────────────────────┬──────────────────────────┐
@@ -134,7 +134,7 @@ ID_Transacao | Produto                  | Categoria      | Preco_Unitario | Quan
 
 ### Processed Features
 
-**`dados_treino_ia.csv`**
+**`dados_treino.csv`**
 ```
 ID_Cliente | Produto | Intervalo_Medio_Habito | Dias_Desde_Ultima_Compra | Total_Compras_Historico | Target_Dias_Restantes
 10000      | Lentes  | 30.5                   | 10                       | 8                       | 20.5
@@ -233,7 +233,6 @@ This verifies:
 ## Project Structure
 
 ```
-IA_PROJ2/
 ├── script.py                          # Data generation
 ├── processing_data.py                 # Feature engineering (with noise)
 ├── model.py                           # 4 ML regression algorithms
@@ -244,7 +243,7 @@ IA_PROJ2/
 ├── data/
 │   ├── transacoes.csv                 # Raw transactions (normalized)
 │   ├── itens_transacao.csv            # Items per transaction (normalized)
-│   ├── dados_treino_ia.csv            # Features for recurrence model (101 examples)
+│   ├── dados_treino.csv               # Features for recurrence model (101 examples)
 │   ├── dados_cocompra.csv             # Raw co-purchase data
 │   └── regras_associacao.csv          # Discovered association rules
 └── models/
