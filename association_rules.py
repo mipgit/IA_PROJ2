@@ -108,5 +108,5 @@ for produto in recommendations:
 
 joblib.dump(recommendations, 'models/modelo_recomendacoes.pkl')
 
-print(f"Modelo de recomendações guardado em 'modelo_recomendacoes.pkl'")
+print(f"Modelo de recomendações guardado em 'models/modelo_recomendacoes.pkl'")
 

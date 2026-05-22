@@ -58,11 +58,10 @@ def calculate_dynamic_predictions(df_treino, modelo):
     X = df[['Dias_Desde_Ultima_Compra', 'Intervalo_Medio_Habito', 'Total_Compras_Historico']].values
     
     # Get fresh predictions from trained model
-    df['Target_Dias_Restantes'] = modelo.predict(X)
-    df['Target_Dias_Restantes'] = df['Target_Dias_Restantes'].round(1)
+    df['Previsao_Dias_Restantes'] = modelo.predict(X).round(1)
     
     # Convert -0.0 to 0.0 using threshold (floating point rounding artifact)
-    df.loc[df['Target_Dias_Restantes'].abs() < 0.5, 'Target_Dias_Restantes'] = 0.0
+    df.loc[df['Previsao_Dias_Restantes'].abs() < 0.5, 'Previsao_Dias_Restantes'] = 0.0
     
     return df
 
@@ -188,7 +187,7 @@ if page == "Dashboard Principal":
                 'Cliente': row['ID_Cliente'],
                 'Produto': produto,
                 'Dias Restantes': str(int(dias_restantes)),
-                'Última Compra': row['Data_Ultima_Compra'],
+                'Última Compra': row['Data_Ultima_Compra'].strftime('%Y-%m-%d'),
                 'Urgência': urgencia,
                 'Recomendações': top_recos
             })
@@ -206,9 +205,6 @@ if page == "Dashboard Principal":
 
     with col1:
         st.subheader("Distribuição de Dias Restantes")
-        
-        df_chart = df_treino.copy()
-        df_chart.loc[df_chart['Target_Dias_Restantes'].abs() < 0.5, 'Target_Dias_Restantes'] = 0.0
         
         fig = px.histogram(
             df_pred, x='Previsao_Dias_Restantes',
@@ -259,7 +255,7 @@ elif page == "Previsões de Recorrência":
                 with col_a:
                     st.caption(f"Intervalo Médio: {row['Intervalo_Medio_Habito']:.0f} dias")
                 with col_b:
-                    st.caption(f"Última Compra: {row['Data_Ultima_Compra']}")
+                    st.caption(f"Última Compra: {row['Data_Ultima_Compra'].strftime('%Y-%m-%d')}")
                 with col_c:
                     st.caption(f"Total de Compras: {row['Total_Compras_Historico']:.0f}x")
 
