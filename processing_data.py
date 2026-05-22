@@ -12,7 +12,7 @@ noise_sigma = float(args.noise)
 np.random.seed(int(args.seed))
 
 if not os.path.exists('data/transacoes.csv') or not os.path.exists('data/itens_transacao.csv'):
-    print("Erro: Corre primeiro o script.py!")
+    print("Erro: Corre primeiro o script.py")
     exit()
 
 df_transacoes = pd.read_csv('data/transacoes.csv')
@@ -38,7 +38,7 @@ for (cid, prod), grupo in df.groupby(['ID_Cliente', 'Produto']):
         if noise_sigma > 0:
             target = target + np.random.normal(loc=0.0, scale=noise_sigma)
 
-        if dias_desde_ultima <= intervalo_medio * 1.1:
+        if dias_desde_ultima <= intervalo_medio * 1.5: # permite até 50% de variação (inclui atrasados)
             categoria = grupo['Categoria'].iloc[-1]
             preco = grupo['Preco_Unitario'].iloc[-1]
             marca = grupo['Marca'].iloc[-1]
@@ -52,14 +52,14 @@ for (cid, prod), grupo in df.groupby(['ID_Cliente', 'Produto']):
                 'Dias_Desde_Ultima_Compra': dias_desde_ultima,
                 'Total_Compras_Historico': len(grupo),
                 'Preco_Unitario': preco,
-                'Target_Dias_Restantes': round(max(target, 0), 1),
+                'Target_Dias_Restantes': round(target, 1), 
                 'Data_Ultima_Compra': ultima_compra.strftime('%Y-%m-%d')
             })
 
 df_treino = pd.DataFrame(features_recurrence)
 df_treino.to_csv('data/dados_treino.csv', index=False)
 
-print(f"✓ Dados de treino: {len(df_treino)} exemplos em 'data/dados_treino.csv'")
+print(f"Dados de treino: {len(df_treino)} exemplos em 'data/dados_treino.csv'")
 
 cocompras = []
 
@@ -84,8 +84,5 @@ if len(df_cocompras) > 0:
     pair_freq = pair_freq.sort_values('Frequencia', ascending=False)
 
     pair_freq.to_csv('data/dados_cocompra.csv', index=False)
-    print(f"✓ Dados de co-compra: {len(pair_freq)} pares únicos em 'data/dados_cocompra.csv'")
 else:
-    print("⚠ Sem co-compras para analisar (transações com apenas 1 produto)")
-
-print("\n✓ Processamento concluído!")
+    print("Sem co-compras para analisar (transações com apenas 1 produto)")

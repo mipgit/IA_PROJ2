@@ -123,7 +123,7 @@ def main():
         'RMSE': np.sqrt(mean_squared_error(y, y_pred_baseline)),
         'R2': r2_score(y, y_pred_baseline),
     }
-    print(f"  ✓ Baseline (fórmula determinística)")
+    print(f"Baseline (fórmula determinística)")
 
     for model_def in MODELS:
         trained = train_model(model_def, X_train, y_train)

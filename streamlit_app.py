@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import json
+from datetime import datetime
 import plotly.express as px
 from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
 
@@ -45,9 +47,39 @@ def load_data():
 
     return df_transacoes, df_itens, df_treino, df_regras
 
+def calculate_dynamic_predictions(df_treino, modelo):
+    df = df_treino.copy()
+    today = pd.Timestamp.now()
+    
+    # Recalculate days since last purchase 
+    df['Dias_Desde_Ultima_Compra'] = (today - df['Data_Ultima_Compra']).dt.days
+    
+    # Prepare features for prediction
+    X = df[['Dias_Desde_Ultima_Compra', 'Intervalo_Medio_Habito', 'Total_Compras_Historico']].values
+    
+    # Get fresh predictions from trained model
+    df['Target_Dias_Restantes'] = modelo.predict(X)
+    df['Target_Dias_Restantes'] = df['Target_Dias_Restantes'].round(1)
+    
+    # Convert -0.0 to 0.0 using threshold (floating point rounding artifact)
+    df.loc[df['Target_Dias_Restantes'].abs() < 0.5, 'Target_Dias_Restantes'] = 0.0
+    
+    return df
+
+@st.cache_data
+def load_metrics():
+    try:
+        with open('model_metrics.json', 'r') as f:
+            metrics = json.load(f)
+        return metrics
+    except FileNotFoundError:
+        return {'mae_formatted': 'N/A', 'r2_percentage': 'N/A'}
+
 try:
     modelo_wells, modelo_linear, modelo_dt, modelo_rf, modelo_gb, recommendations = load_models()
     df_transacoes, df_itens, df_treino, df_regras = load_data()
+    df_treino = calculate_dynamic_predictions(df_treino, modelo_recurrence)
+    model_metrics = load_metrics()
 except Exception as e:
     st.error(f"Erro ao carregar modelos: {e}")
     st.stop()
@@ -115,7 +147,7 @@ if page == "Dashboard Principal":
             st.rerun()
     st.divider()
 
-    st.subheader("Clientes para Notificar HOJE")
+    st.subheader("Clientes para Notificar")
 
     notification_threshold = st.slider(
         "Dias até recompra:",
@@ -136,29 +168,48 @@ if page == "Dashboard Principal":
             recos = recommendations.get(produto, [])
 
             top_recos = ", ".join([f"{r['produto']}" for r in recos[:2]]) if recos else "Sem recomendações"
-
+            
+            dias_restantes = float(row['Target_Dias_Restantes'])
+            
+            # handle -0.0 display issue
+            if abs(dias_restantes) < 0.5:
+                dias_restantes = 0
+            
+            if dias_restantes < 0:
+                urgencia = '🔴 ATRASADO'
+            elif dias_restantes <= 3:
+                urgencia = '🔴 ALTA'
+            elif dias_restantes <= 9:
+                urgencia = '🟡 MÉDIA'
+            else:
+                urgencia = '🟢 BAIXA'
+            
             notification_data.append({
                 'Cliente': row['ID_Cliente'],
                 'Produto': produto,
-                'Previsão (dias)': int(row['Previsao_Dias_Restantes']),
+                'Dias Restantes': str(int(dias_restantes)),
                 'Última Compra': row['Data_Ultima_Compra'],
-                'Urgência': '🔴 ALTA' if row['Previsao_Dias_Restantes'] <= 3 else '🟡 MÉDIA' if row['Previsao_Dias_Restantes'] <= 9 else '🟢 BAIXA',
+                'Urgência': urgencia,
                 'Recomendações': top_recos
             })
 
         df_notify_display = pd.DataFrame(notification_data)
         st.dataframe(df_notify_display, use_container_width=True, hide_index=True)
-
-        st.success(f"✓ {len(df_notify_display)} cliente(s) para notificar!")
+        
+        st.success(f"{len(df_notify_display)} cliente(s) para notificar!")
     else:
-        st.info(f"✓ Nenhum cliente necessita de notificação nos próximos {notification_threshold} dias")
-
+        st.info(f"Nenhum cliente necessita de notificação nos próximos {notification_threshold} dias")
+    
     st.divider()
 
     col1, col2 = st.columns(2)
 
     with col1:
         st.subheader("Distribuição de Dias Restantes")
+        
+        df_chart = df_treino.copy()
+        df_chart.loc[df_chart['Target_Dias_Restantes'].abs() < 0.5, 'Target_Dias_Restantes'] = 0.0
+        
         fig = px.histogram(
             df_pred, x='Previsao_Dias_Restantes',
             nbins=20,
