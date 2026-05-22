@@ -339,7 +339,7 @@ elif page == "Recomendações de Produtos":
 
     df_regras_display.columns = [
         'Produto A', 'Produto B', 'Confiança A→B', 'Confiança B→A', 
-        'Co-Purchase Rate (%)', 'Lift'
+        'Taxa de Compra Conjunta (%)', 'Lift'
     ]
 
     st.dataframe(df_regras_display, use_container_width=True, hide_index=True)
