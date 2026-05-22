@@ -172,7 +172,6 @@ if page == "Dashboard Principal":
                 'Cliente': row['ID_Cliente'],
                 'Produto': produto,
                 'Previsão (dias)': int(row['Previsao_Dias_Restantes']),
-                'Valor Real (dias)': int(row['Target_Dias_Restantes']),
                 'Última Compra': row['Data_Ultima_Compra'],
                 'Urgência': '🔴 ALTA' if row['Previsao_Dias_Restantes'] <= 3 else '🟡 MÉDIA' if row['Previsao_Dias_Restantes'] <= 9 else '🟢 BAIXA',
                 'Recomendações': top_recos
@@ -192,15 +191,11 @@ if page == "Dashboard Principal":
     
     with col1:
         st.subheader("Distribuição de Dias Restantes")
-        dist_df = pd.DataFrame({
-            'Previsão': df_pred['Previsao_Dias_Restantes'],
-            'Real': df_treino['Target_Dias_Restantes'],
-        }).melt(var_name='Tipo', value_name='Dias')
         fig = px.histogram(
-            dist_df, x='Dias', color='Tipo',
-            nbins=20, barmode='overlay',
-            title="Previsão vs Real",
-            opacity=0.7,
+            df_pred, x='Previsao_Dias_Restantes',
+            nbins=20,
+            title="Dias previstos até próxima compra",
+            labels={'Previsao_Dias_Restantes': 'Dias Restantes (previsão)'}
         )
         st.plotly_chart(fig, use_container_width=True)
     
@@ -246,14 +241,7 @@ elif page == "Previsões de Recorrência":
                 
                 with col_info:
                     pred = row['Previsao_Dias_Restantes']
-                    real = row['Target_Dias_Restantes']
-                    erro = abs(pred - real)
-                    st.metric(
-                        "Previsão",
-                        f"{pred:.0f} dias",
-                        delta=f"Real: {real:.0f} dias (erro: {erro:.0f})",
-                        delta_color="off",
-                    )
+                    st.metric("Previsão", f"{pred:.0f} dias")
                 
                 # Additional info
                 col_a, col_b, col_c = st.columns(3)
@@ -477,8 +465,8 @@ elif page == "Análise do Modelo":
     
     with col3:
         st.markdown("**Previsões**")
-        st.write(f"Dias Restantes (média): {df_treino['Target_Dias_Restantes'].mean():.1f} dias")
-        st.write(f"Dias Restantes (mediana): {df_treino['Target_Dias_Restantes'].median():.1f} dias")
+        st.write(f"Dias Restantes (média): {df_pred['Previsao_Dias_Restantes'].mean():.1f} dias")
+        st.write(f"Dias Restantes (mediana): {df_pred['Previsao_Dias_Restantes'].median():.1f} dias")
 
 # ============================================================================
 # FOOTER
