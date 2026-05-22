@@ -78,7 +78,7 @@ def load_metrics():
 try:
     modelo_wells, modelo_linear, modelo_dt, modelo_rf, modelo_gb, recommendations = load_models()
     df_transacoes, df_itens, df_treino, df_regras = load_data()
-    df_treino = calculate_dynamic_predictions(df_treino, modelo_recurrence)
+    df_treino = calculate_dynamic_predictions(df_treino, modelo_gb)
     model_metrics = load_metrics()
 except Exception as e:
     st.error(f"Erro ao carregar modelos: {e}")
@@ -132,7 +132,7 @@ if page == "Dashboard Principal":
 
     st.divider()
 
-    st.subheader("⚙️ Selecionar Algoritmo de Previsão")
+    st.subheader("Selecionar Algoritmo de Previsão")
     col_algo = st.columns([2, 4])
     with col_algo[0]:
         novo_algo = st.selectbox(
@@ -169,7 +169,7 @@ if page == "Dashboard Principal":
 
             top_recos = ", ".join([f"{r['produto']}" for r in recos[:2]]) if recos else "Sem recomendações"
             
-            dias_restantes = float(row['Target_Dias_Restantes'])
+            dias_restantes = float(row['Previsao_Dias_Restantes'])
             
             # handle -0.0 display issue
             if abs(dias_restantes) < 0.5:
